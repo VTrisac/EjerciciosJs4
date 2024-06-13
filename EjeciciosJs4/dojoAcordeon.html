@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.14.1/dojo/dojo.js" data-dojo-config="parseOnLoad:true, async:true"></script>
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.14.1/dijit/themes/claro/claro.css">
+    </head>
+    <body class="claro">
+        <script>
+            require(["dojo/parser", "dijit/layout/AccordionContainer","dijit/layout/ContentPane"]);
+        </script>
+        <div style="width: 300px; height: 425px">
+            <div data-dojo-type="dijit/layout/AccordionContainer" style="height: 425px;">
+                <div data-dojo-type="dijit/layout/ContentPane" title="Biografia">
+                    <h1>Leopold Mozart</h1>
+                    <p>Johann Georg Leopold Mozart nació el 14 de noviembre de 1719 en Augsburgo
+                    (Sacro Imperio Romano Germánico, actual Alemania), hijo de Johann Georg
+                    Mozart (1679-1736), un encuadernador, y su segunda esposa Anna Maria
+                    Sulzer (1696-1766). Desde temprana edad cantó como niño de Coro [de
+                    Iglesia].</p>
+                    <p>Estudió en una escuela Jesuita local, el St. Salvator Gymnasium, donde
+                    estudió lógica, ciencia y teología graduándose magna cum laude en 1735.
+                    Entonces pasó a una escuela más avanzada, St. Salvator Lyceum. Ingresó en
+                    la universidad de Salzburgo en 1737 y estudió Filosofía y Derecho.
+                    Como consecuencias de sus reiteradas faltas fue expulsado de dicha
+                    universidad en 1739.</p>
+                    </div>
+                <div data-dojo-type="dijit/layout/ContentPane" title="Imagen" selected>
+                    <img src="graficos/Mozart.jpg">
+                </div>
+                <div data-dojo-type="dijit/layout/ContentPane" title="Composiciones">
+                    <p> Compuso, entre otras, las siguientes sinfonías:<p>
+                    <ul>
+                    <li>Die Bauernhochzeit (Bodas campesinas)</li>
+                    <li>Musikalische Schlittenfahrt (Viaje musical en trineo)</li>
+                    <li>Sinfonía Burlesca;</li>
+                    </ul>
+                    <p>Además escribió juegos de acción conciertos, música de cámara, canciones,
+                    cantatas y misas. Se le atribuye la autoría de la Sinfonía de los
+                    juguetes.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

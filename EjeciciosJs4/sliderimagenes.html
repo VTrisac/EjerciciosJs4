@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+        <style>
+            h2 { 
+                text-align:center; 
+                font:normal 150% Georgia; 
+            }
+            #infoSlider { 
+                width:650px; margin:auto; 
+                padding:0 50px 50px;
+                background-color:#ebebeb; 
+                border:1px solid #898989; 
+            }
+            .visor { 
+                width:607px; 
+                height:343px; 
+                margin:0 auto 40px; 
+                padding:1px;
+                overflow:hidden; 
+                position:relative; 
+                border:1px solid #898989; 
+            }
+            .contenido { 
+                width:610px; 
+                height:335px; 
+                position:relative; 
+            }
+            .elemento { 
+                width:304px; 
+                float:left; 
+                font-family:Tahoma; 
+                text-align:center;
+                background-color:#ebebeb; 
+            }
+            .elemento h2 { 
+                font-size:100%; 
+                margin:10px 0; 
+            }
+            .elemento dl { margin:10px 0; }
+            .elemento dt, .elemento dd { 
+                float:left; 
+                width:149px; 
+                text-align:right; 
+                margin:0;
+                font-size:70%; 
+            }
+            .elemento dt { 
+                font-weight:bold; 
+                margin-right:5px; 
+            }
+            .elemento dd { text-align:left; }
+            .elemento img { 
+                border:1px solid #898989; 
+                background-color:#ffffff; 
+                padding:1px; 
+            }
+        </style>
+        <script>
+            $(document).ready(function(){
+               //Variables para controlar
+                var contenido = $(".contenido", $("#infoSlider")); //Capa principal
+                var elemento = $(".elemento", $("#infoSlider")); //Elemento de la capa
+               //Tamaño de la capa general
+                contenido.css("width", elemento.length * parseInt(elemento.css("width")));
+                //Configuración del slider
+                var sliderOpc = {
+                    max: (elemento.length * parseInt(elemento.css("width"))) -
+                    parseInt($(".visor",$("#infoSlider")).css("width")),slide: function(e, ui) {
+                        contenido.css("left", "-" + ui.value + "px");
+                    }
+                };
+                //Crea el slider
+                $("#slider").slider(sliderOpc);                
+            });
+        </script>
+    </head>
+    <body>
+        <div id="infoSlider">
+            <h2>Datos acerca de coches</h2>
+            <div class="visor">
+                <div class="contenido">
+                    <div class="elemento">
+                        <h2>OPEL</h2>
+                        <img src="graficos/coches/opel.jpg" alt="Opel">
+                        <dl class="details">
+                            <dt>Gama:</dt><dd>Corsa</dd>
+                            <dt>Modelo:</dt><dd>Kaleidoscope</dd>
+                        </dl>
+                    </div>
+                    <div class="elemento">
+                        <h2>SEAT</h2>
+                        <img src="graficos/coches/seat.jpg" alt="Seat">
+                        <dl class="details">
+                            <dt>Gama:</dt><dd>Altea</dd>
+                            <dt>Modelo:</dt><dd>Ecomotive</dd>
+                        </dl>
+                    </div>
+                    <div class="elemento">
+                        <h2>MITSUBISHI</h2>
+                        <img src="graficos/coches/mitsubishi.jpg" alt="Mitsubisi">
+                        <dl class="details">
+                            <dt>Gama:</dt><dd>ASX</dd>
+                            <dt>Modelo:</dt><dd>180 DID Challenge</dd>
+                        </dl>
+                    </div>
+                    <div class="elemento">
+                        <h2>TOYOTA</h2>
+                        <img src="graficos/coches/toyota.jpg" alt="Toyota">
+                        <dl class="details">
+                            <dt>Gama:</dt><dd>Prius</dd>
+                            <dt>Modelo:</dt><dd>HSD Eco</dd>
+                        </dl>
+                    </div>
+                    <div class="elemento">
+                        <h2>RENAULT</h2>
+                        <img src="graficos/coches/renault.jpg" alt="Renault">
+                        <dl class="details">
+                            <dt>Gama:</dt><dd>Megane</dd>
+                            <dt>Modelo:</dt><dd>Emotion</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div id="slider"></div>
+        </div>
+    </body>
+</html>

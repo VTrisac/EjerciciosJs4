@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.14.1/dojo/dojo.js" data-dojo-config="parseOnLoad:true, async:true"></script>
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.14.1/dijit/themes/claro/claro.css">
+        <script>
+            var i=0;
+            function cargando(){
+            Barra.set({value: ++i});
+            if(i < 10){
+            setTimeout(cargando, 100 + Math.floor(Math.random() * 1000));
+            }
+            }
+        </script>
+    </head>
+    <body class="claro">
+        <script>
+            require(["dojo/parser", "dijit/ProgressBar"]);
+        </script>
+        <div data-dojo-type="dijit/ProgressBar" style="width:300px" data-dojo-id="Barra" id="downloadProgress" data-dojo-props="maximum:10"></div>
+        <input type="button" value="Comenzar!" onclick="cargando();" />
+    </body>
+</html>

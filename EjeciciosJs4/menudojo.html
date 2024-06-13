@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.14.1/dojo/dojo.js" data-dojo-config="parseOnLoad:true, async:true"></script>
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.14.1/dijit/themes/claro/claro.css">
+    </head>
+    <body class="claro">
+        <div data-dojo-type="dijit.MenuBar" id="MenuNav">
+            <div data-dojo-type="dijit.PopupMenuBarItem">
+                <span>Periódicos</span>
+                <div data-dojo-type="dijit.DropDownMenu" id="Periodicos">
+                    <div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){window.open('http://www.elperiodico.es');}">
+                        El Periódico</div>
+                    <div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){window.open('http://www.publico.es')}">Publico</div>
+                </div>
+            </div>
+                <div data-dojo-type="dijit.PopupMenuBarItem">
+                <span>Deporte</span>
+                    <div data-dojo-type="dijit.DropDownMenu" id="Deportes">
+                        <div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){window.open('http://www.coi.es');}">COI</div>
+                        <div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){window.open('http://www.uefa.es')}">Uefa</div>
+                        <div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){window.open('http://www.acb.es')}">ACB</div>
+                    </div>
+            </div>
+        </div>
+        <script>
+            require(["dojo/parser","dijit/MenuBar","dijit/PopupMenuBarItem","dijit/DropDownMenu","dijit/MenuItem"]);
+        </script>
+    </body>
+</html>

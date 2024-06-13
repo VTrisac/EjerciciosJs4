@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    </head>
+    <body>
+        <div id="tabs">
+            <ul>
+                <li><a href="#capa1"><span>Ficha 1</span></a></li>
+                <li><a href="#capa2"><span>Ficha 2</span></a></li>
+                <li><a href="#capa3"><span>Ficha 3</span></a></li>
+            </ul>
+            <div id="capa1">
+                <p>La primera ficha se activa por defecto:</p>
+                <pre><code>$("#tabs").tabs(); </code></pre>
+            </div>
+            <div id="capa2">
+                <h1>Contenido de la Ficha 2</h1>
+            </div>
+            <div id="capa3">
+                <h1>Contenido de la Ficha 3</h1>
+            </div>
+        </div>
+            <script>
+                $("#tabs").tabs();
+            </script>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>        
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/humanity/jquery-ui.css">                        
+        <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.14.1/dojo/dojo.js" data-dojo-config="parseOnLoad:true, async:true"></script>
+        <link rel="stylesheet"  href="http://ajax.googleapis.com/ajax/libs/dojo/1.14.1/dijit/themes/tundra/tundra.css">        
+        <script type="text/javascript">
+	$(document).ready(function(){
+		$("#fichas").tabs();
+		$('#controlslider').slider({
+		range: 'max',
+		min: 1,
+		max: 10,
+		value: 2,
+		slide: function(event, ui) {
+			$('#cantidad').html(ui.value);
+		}
+	});
+	});
+        </script>
+    </head>
+    <body class="tundra">
+        
+<div id="fichas">
+<ul>
+		<li><a href="#ficha1">Inicial</a></li>
+		<li><a href="#ficha2">Primeras preguntas</a></li>
+		<li><a href="#ficha3">Segundas preguntas</a></li>
+		<li><a href="#ficha4">Últimas preguntas</a></li>
+	</ul>
+<div id="ficha1">
+  <h1>Bienvenido a nuestra encuesta de satisfación.</h1>
+  <h2>Desplácese por la distintas fichas para contestar a la encuesta, cuando termine pulse el botón Enviar
+  para finalizar la encuesta.</h2>
+  <h4>Gracias por participar.</h4>
+</div>
+<div id="ficha2">
+Nombre:<input id="Nombre" style="width: 10em;" data-dojo-type="dijit/form/TextBox"/><br>
+Apellidos: <input id="Apellidos" style="width: 25em;" data-dojo-type="dijit/form/TextBox"/><br>
+E-Mail:
+<input id="email" style="width: 15em;" data-dojo-type="dijit/form/TextBox"/>
+</div>
+<div id="ficha3">
+  Como nos ha conocido<select data-dojo-type="dijit/form/ComboBox" id="Conocer" style="width:150px">
+  <option>Prensa</option>
+  <option selected>Amigos</option>
+  <option>Internet</option>
+  <option>Otros</option>
+</select> <br>
+Fecha de compra:
+<input name="Fecha" id="Fecha" style="width: 7em;" data-dojo-type="dijit/form/DateTextBox"  />
+</div>
+<div id="ficha4">
+<h3>Seleccione su nivel de satisfacción con la compra: <span id="cantidad">2</span></h3>
+<div id="controlslider"></div>
+</div>
+</div>
+
+<script>
+   require(["dijit/form/TextBox","dijit/form/DateTextBox","dijit/form/ComboBox", "dojo/parser"]);
+</script>
+    </body>
+</html>

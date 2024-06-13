@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    </head>
+    <body onload="progress()">
+        <div id="progressbar"></div>
+            <script>
+                var valor=0;
+                function progress() {
+                    valor++;
+                    $("#progressbar").progressbar({
+                    value: valor,
+                    complete: function(event,ui) {
+                        alert("finalizado");
+                    }
+                });
+                if ( valor < 100 ) {
+                    setTimeout(progress, 100);
+                }
+                }
+</script>
+    </body>
+</html>

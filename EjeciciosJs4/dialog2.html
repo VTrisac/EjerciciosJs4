@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="utf-8">
+        <script src="//code.jquery.com/jquery-1.12.0.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/humanity/jquery-ui.css">
+        <script>
+            $(document).ready(function() {
+                
+              	
+                $('#dialog').dialog({
+                    height: 400,
+                    closeOnEscape: true,
+                    resizable: false,
+                    title:'Widget Dialog',
+                    buttons: {'Cerrar' : function(){$(this).dialog('close');}},
+                    beforeClose: function(){alert('El Dialog se esta cerrando');}
+                });
+            });
+        </script>
+
+        <style>
+            #capaacordeon{
+                height:300px;width:400px;
+                 }
+                 
+        </style>
+    </head>
+ <body>
+   <div id="dialog" title="Dialog">
+	<p>En esta capa podemos insertar lo que queremos mostrar en el Dialog</p>
+</div>
+    
+</body>
+</html>

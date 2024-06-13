@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Ejemplo JQuery - Efectos Color Animation</title>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+        <style>
+            #elem {
+                color: #0c8A10;
+                background-color: #aaa;
+                font-size: 25px;
+                padding: 1em;
+                text-align: center;
+            }
+        </style>
+        <script>
+            function animar(){
+                $("#elem").animate({color:"#0000FF", backgroundColor:"rgb(0,0,0)"});
+            }
+        </script>
+    </head>
+    <body>
+        <div id="elem" onclick="animar()">Capa con colores para animar.</div>
+    </body>
+</html>
